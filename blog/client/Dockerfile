@@ -1,4 +1,9 @@
 FROM node:18.6.0-alpine3.16
+
+# Add the following lines
+ENV CI=true
+ENV WDS_SOCKET_PORT=0
+
 WORKDIR  /app
 COPY package.json ./
 RUN npm install
