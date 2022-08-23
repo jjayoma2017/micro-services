@@ -4,7 +4,7 @@ WORKDIR /app
 # copy just the package.json so that we can run the dependency 
 COPY package.json . 
 # install all dependency
-RUN npm install
+RUN npm install --only=prod
 # Copy all inside our project dir to /app dir
 COPY . . 
 
